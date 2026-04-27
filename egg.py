@@ -1,6 +1,4 @@
-from dinosaur import ConcreteDinosaur, Dinosaur
-
-
+from dinosaur import ConcreteDinosaur
 class Egg:
     def __init__(self, eggType: Dinosaur):
         self.__type = eggType

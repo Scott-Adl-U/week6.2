@@ -10,6 +10,7 @@ class Dinosaur(ABC):
         self.__age = age
         self.__egg = []
         self.__eggType = None
+        self.__food_inventory = []
 
     def get_name(self):
         return self.__name
@@ -30,7 +31,6 @@ class Dinosaur(ABC):
         if not isinstance(name, str):
             raise TypeError("Name must be a string!")
         self.__name = name
-
     def set_gender(self, gender):
         # For the sake of this program gender is binary
         if not isinstance(gender, str):
