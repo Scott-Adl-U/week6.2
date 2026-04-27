@@ -1,4 +1,4 @@
-from dinosaur import ConcreteDinosaur
+
 class Egg:
     def __init__(self, eggType):
         self.__type = eggType
@@ -17,4 +17,3 @@ class Egg:
     def hatch(self):
         return self.__type()
 
-dinosaur = ConcreteDinosaur("Joe", "female", 20)
