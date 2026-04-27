@@ -37,9 +37,9 @@ class Dinosaur(ABC):
     def set_egg(self, egg):
         if not self.gender == "female":
             raise TypeError("Only female dinosaurs can tend to eggs!")
-        if not isinstance(egg, Egg):
-            raise TypeError("Egg must be Egg object!")
-        if not egg.name == self.__eggType:
+        if not isinstance(egg, str):
+            raise TypeError("Egg must be str object!")
+        if not egg == self.__eggType:
             raise TypeError(f"Egg must be {self.eggType} type!")
         self.__egg.append(Egg(egg))
 
@@ -75,4 +75,6 @@ class ConcreteDinosaur(Dinosaur):
         super().__init__(name, gender, age)
 
 dinosaur = ConcreteDinosaur("Bill", "male", 20)
+print(dinosaur)
+dinosaur.gender = "female"
 print(dinosaur)

@@ -1,6 +1,7 @@
+from dinosaur import ConcreteDinosaur
 class Egg:
-    def __init__(self):
-        self.__type = None
+    def __init__(self, eggType):
+        self.__type = eggType
 
     def set_type(self, eggType):
         if isinstance(eggType, str):
@@ -11,4 +12,9 @@ class Egg:
     def get_type(self):
         return self.__type
     
-    egg = property(get_type, set_type)
+    name = property(get_type, set_type)
+    
+    def hatch(self):
+        return self.__type()
+
+dinosaur = ConcreteDinosaur("Joe", "female", 20)
